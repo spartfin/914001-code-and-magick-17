@@ -36,8 +36,8 @@
     var onMouseUp = function (upEvt) {
       upEvt.preventDefault();
 
-      setupDialogElement.removeEventListener('mousemove', onMouseMove);
-      setupDialogElement.removeEventListener('mouseup', onMouseUp);
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
 
       if (dragged) {
         var onClickPreventDefault = function (clickEvt) {
@@ -49,22 +49,16 @@
 
     };
 
-    setupDialogElement.addEventListener('mousemove', onMouseMove);
-    setupDialogElement.addEventListener('mouseup', onMouseUp);
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
   });
 
 
   // перетаскиваем предмет из магазина в рюкзак
   var dragged;
-  setupDialogElement.addEventListener('drag', function () {
-  }, false);
 
   setupDialogElement.addEventListener('dragstart', function (evt) {
     dragged = evt.target;
-  }, false);
-
-  setupDialogElement.addEventListener('dragend', function (evt) {
-    evt.target.style.opacity = '';
   }, false);
 
   setupDialogElement.addEventListener('dragover', function (evt) {
