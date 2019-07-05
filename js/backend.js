@@ -1,7 +1,6 @@
 'use strict';
 
 (function () {
-
   var BASE_URL = 'https://js.dump.academy/code-and-magick';
   var URL_POST = BASE_URL;
   var URL_GET = BASE_URL + '/data';

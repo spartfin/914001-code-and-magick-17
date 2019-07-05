@@ -2,6 +2,11 @@
 
 (function () {
 
+  var getRandom = function (n) {
+    return Math.floor(Math.random() * n);
+  };
+  window.getRandom = getRandom;
+
   var addError = function (errorMessage) {
     var node = document.createElement('div');
     node.classList.add('error-message');

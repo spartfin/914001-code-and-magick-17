@@ -16,11 +16,6 @@
   window.WIZARD_FAREBALL = WIZARD_FAREBALL;
   var fragment = document.createDocumentFragment();
 
-  var getRandom = function (n) {
-    return Math.floor(Math.random() * n);
-  };
-  window.getRandom = getRandom;
-
   var renderWizard = function (wizard) {
     var wizardElement = similarWizardTemplate.cloneNode(true);
     wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
@@ -36,5 +31,5 @@
     similarList.appendChild(fragment);
   };
 
-  window.backend.load(renderSimilarWizards, window.utils.addError);
+  window.renderSimilarWizards = renderSimilarWizards;
 })();
