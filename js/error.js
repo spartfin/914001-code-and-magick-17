@@ -24,7 +24,7 @@
     }
   };
 
-  window.utils = {
+  window.error = {
     addError: addError,
     clearErrors: clearErrors
   };
